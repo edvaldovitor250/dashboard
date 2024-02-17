@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="./assets/images/tech-nation-logo.ico" type="image/x-icon">
+    <title>Dashboards - Tech-Nation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>Tech</span>-Nation</p>
+        <a href="./index.html" class="icon-a"><i class="fa fa-dashboard icons"></i> Dashboard</a>
+        <a href="./assets/page/clientes.html" class="icon-a"><i class="fa fa-users icons"></i> Clientes</a>
+        
+    </div>
+    <div id="main">
+
+        <div class="head">
+            <nav class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">☰ Dashboard</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">☰ Clientes</span>
+            </nav>
+
+            <div class="col-div-6">
+                <div class="profile">
+                    <img src="./assets/images/edval.jpeg" class="pro-img" />
+                    <p>Edvaldo Vitor <span>Full-Stack</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-3">
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Indicadores</h2>
+                    <div id="indicadores">
+                        <div class="indicador" id="indicador-notas-emitidas">
+                            <span class="indicador-cor" style="background-color: #246dec;"></span>
+                            <span id="valor-notas-emitidas">0</span> Notas Emitidas
+                        </div>
+                        <div class="indicador" id="indicador-notas-sem-cobranca">
+                            <span class="indicador-cor" style="background-color: #cc3c43;"></span>
+                            <span id="valor-notas-sem-cobranca">0</span> Notas sem Cobrança
+                        </div>
+                        <div class="indicador" id="indicador-notas-vencidas">
+                            <span class="indicador-cor" style="background-color: #367952;"></span>
+                            <span id="valor-notas-vencidas">0</span> Notas Vencidas
+                        </div>
+                        <div class="indicador" id="indicador-notas-a-vencer">
+                            <span class="indicador-cor" style="background-color: #f5b74f;"></span>
+                            <span id="valor-notas-a-vencer">0</span> Notas a Vencer
+                        </div>
+                        <div class="indicador" id="indicador-notas-pagas">
+                            <span class="indicador-cor" style="background-color: #4f35a1;"></span>
+                            <span id="valor-notas-pagas">0</span> Notas Pagas
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard">
+                        <div class="form-group">
+                            <label for="filtro-mes">Filtrar por Mês:</label>
+                            <select id="filtro-mes" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filtro-trimestre">Filtrar por Trimestre:</label>
+                            <select id="filtro-trimestre" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filtro-ano">Filtrar por Ano:</label>
+                            <select id="filtro-ano" class="form-control"></select>
+                        </div>
+                        <button class="button" onclick="aplicarFiltros()">Aplicar Filtros</button>
+                    </div>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="charts-container">
+                        <div class="charts-card">
+                            <div class="chart-title">Gráfico de Barras</div>
+                            <div id="bar-chart"></div>
+                        </div>
+                        <div class="charts-card">
+                            <div class="chart-title">Gráfico de Torta</div>
+                            <div id="area-chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+        <div class="clearfix"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="./assets/js/dados/dashboard-dados.js"></script>
+    <script src="./assets/js/dashboard/area-chart.js"></script>
+    <script src="./assets/js/dashboard/bar-chart.js"></script>
+    <script type="module" src="./assets/js/filter/filtroIndicadores.js"></script>
+    <script src="./assets/js/filter/opcoesFiltro.js"></script>
+
+
+</body>
+</html>

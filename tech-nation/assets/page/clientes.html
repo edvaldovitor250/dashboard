@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/tech-nation-logo.ico" type="tech-nation-logo.ico">
+    <title>Clientes - Tech-Nation</title>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>Tech</span>-Nation</p>
+        <a href="/tech-nation/index.html" class="icon-a"><i class="fa fa-dashboard icons"></i> Dashboard</a>
+        <a href="./clientes.html" class="icon-a"><i class="fa fa-users icons"></i> Clientes</a>
+    </div>
+    <div id="main">
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">☰ Clientes</span>
+            </div>
+            <div class="col-div-6">
+                <div class="profile">
+                    <img src="../images/edval.jpeg" class="pro-img" />
+                    <p>Edvaldo Vitor <span>Full-Stack</span></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <div class="container mt-3">
+            <div class="filtro-de-todas-colunas">
+                <div class="col-md-3">
+                    <label for="filtro-mes-emissao" class="form-label">Mês de emissão:</label>
+                    <input type="month" class="form-control" id="filtro-mes-emissao">
+                </div>
+                <div class="col-md-3">
+                    <label for="filtro-mes-cobranca" class="form-label">Mês de cobrança:</label>
+                    <input type="month" class="form-control" id="filtro-mes-cobranca">
+                </div>
+                <div class="col-md-3">
+                    <label for="filtro-mes-pagamento" class="form-label">Mês de pagamento:</label>
+                    <input type="month" class="form-control" id="filtro-mes-pagamento">
+                </div>
+                <div class="col-md-3">
+                    <label for="filtro-status" class="form-label">Status da nota:</label>
+                    <select class="form-select" id="filtro-status">
+                        <option value="">Todos</option>
+                        <option value="Emitida">Emitida</option>
+                        <option value="Cobrança realizada">Cobrança realizada</option>
+                        <option value="Pagamento em atraso">Pagamento em atraso</option>
+                        <option value="Pagamento realizado">Pagamento realizado</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br /><br />
+       <div class="border-separate border-spacing-2 border border-slate-500 custom-col">
+            <div class="border-separate border-spacing-2 border border-slate-500 custom-box">
+                <div class="border-separate border-spacing-2 border border-slate-500 custom-content">
+                    <br />
+                    <h2 id="titulo-tabela">Tabela de Notas</h2>
+                    <table class="border-separate border-spacing-2 border border-slate-500 custom-table">
+                        <thead id="valores-tabela">
+                            <tr class="border-separate border-spacing-2 border border-slate-500">
+                                <th class="border-separate border-spacing-2 border border-slate-500">Nome do Pagador
+                                </th>
+                                <th class="border-separate border-spacing-2 border border-slate-500">Número da Nota</th>
+                                <th class="border-separate border-spacing-2 border border-slate-500">Data de Emissão
+                                </th>
+                                <th class="border-separate border-spacing-2 border border-slate-500">Data de Cobrança
+                                </th>
+                                <th class="border-separate border-spacing-2 border border-slate-500">Data de Pagamento
+                                </th>
+                                <th class="border-separate border-spacing-2 border border-slate-500">Valor</th>
+                                <th class="border-separate border-spacing-2 border border-slate-500">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-notas">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../js/filter/filtroCliente.js"></script>
+        <script src="../js/filter/opcoesFiltro.js"></script>
+
+</body>
+
+</html>
